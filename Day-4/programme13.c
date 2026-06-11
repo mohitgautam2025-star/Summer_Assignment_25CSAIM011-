@@ -1,19 +1,17 @@
 //wap to generate fibonacci series up to n terms.
 #include<stdio.h>
 int main()
-int first=0,second=1,next,n;
-printf("enter the number of terms:");
-scanf("%d",&n);
-printf("fibonacci series:");
-for(int i=0;i<n;i++)
 {
-    if(i<=1)
-        next=i;
-    else
+    int n, i, t1 = 0, t2 = 1, nextTerm;
+    printf("Enter the number of terms : ");
+    scanf("%d", &n);
+    printf("Fibonacci Series : ");
+    for(i = 1; i <= n; ++i)
     {
-        next=first+second;
-        first=second;
-        second=next;
+        printf("%d ", t1);
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
     }
-    printf("%d ",next);
+    return 0;
 }
